@@ -1,0 +1,31 @@
+{
+  "name": "hammer-omni",
+  "version": "1.0.0",
+  "description": "Garry's Mod Map Editor - Electron + Three.js",
+  "main": "dist-electron/main.js",
+  "type": "module",
+  "scripts": {
+    "test": "vitest --run",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron:copy": "node scripts/copy-electron.js",
+    "electron:run": "node scripts/copy-electron.js && electron .",
+    "build:electron": "vite build && node scripts/copy-electron.js && node scripts/package-electron.js"
+  },
+  "author": "Retrime",
+  "license": "MIT",
+  "devDependencies": {
+    "@vitest/coverage-v8": "^4.1.5",
+    "electron": "^28.0.0",
+    "electron-packager": "^17.1.2",
+    "fast-check": "^4.7.0",
+    "jsdom": "^29.1.1",
+    "vite": "^7.3.2",
+    "vitest": "^4.1.5"
+  },
+  "dependencies": {
+    "manifold-3d": "^3.4.1",
+    "three": "^0.160.0"
+  }
+}
